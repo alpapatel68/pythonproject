@@ -1,0 +1,9 @@
+-e git://github.com/django/django.git@3a435a057c691bf9d5936766f54c5f9bd01be176#egg=Django-master
+SQLAlchemy==0.6.5
+django-tables2==0.15.0
+pypm==1.2.6
+pytz==2014.2
+pywin32==214
+six==1.6.1
+virtualenv==1.5.1
+wsgiref==0.1.2

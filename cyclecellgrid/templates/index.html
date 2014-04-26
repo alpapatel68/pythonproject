@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<html>
+    <head>
+    <title>CycleGridApp</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    </head>
+    <body><BR><BR>
+    <center><H1> Ferris wheel </H1>
+
+    <table ><tr>
+    {% for data in cell %}
+       <td bgcolor='#{{data.color}}'><h3>  {{ data.value }}  </h3></td>
+       {% if forloop.last %}
+         </tr>
+       {% else %}
+       {% if forloop.counter|divisibleby:"3" %}
+           </tr><tr>
+       {% endif %}
+       {% endif %}
+    {% endfor %}
+    </table>
+    <br>
+    <a href="/cyclecellgrid/CellGrid"><input class="myButton" type="button" value="Rotate cell"></a>
+    <a href="/cyclecellgrid/index"><input class="myButton" type="button" value="New cell"></a>
+
+    </center></body>
+
+
+
+</html>
